@@ -1,25 +1,20 @@
-// chiedere all'utente il numero di km che vuole percorrere
-var kilometri = parseInt(prompt("Quanti km hai intenzione di percorrere?"));
-console.log(kilometri);
-// chiedere all'utene la sua età
-var anni = parseInt(prompt("Indica la tua età"));
-console.log(anni);
-// tariffa 18-65 anni
-var tariffaStandard = kilometri * 0.21;
-console.log(tariffaStandard);
-// tariffa 0-18 anni
-var under18 = ((tariffaStandard * 20) / 100) ;
-console.log(under18);
-// // tariffa dopo i 65 anni
-var over65 = ((tariffaStandard * 40) / 100) ;
-console.log(over65);
+var kmDaPercorrere = parseInt(prompt('Inserisci il numero di km da percorrere'));
+.console.log(kmDaPercorrere);
+var etaUtente = parseInt(prompt('Inserisci età del passeggero'));
+.console.log(etaUtente);
+var prezzokm = 0.21;
+var costoBiglietto = prezzokm * kmDaPercorrere;
+.console.log(costoBiglietto);
 
+var messaggio = 'Il costo del tuo biglietto è:' + costoBiglietto.tofix(2) + '€';
 
-// prezzi suddivisi per fasce d'età
-if ((anni >= 18) && (anni <= 65)) {
-  console.log(tariffaStandard);
-} else if (anni <= 18) {
-  console.log(under18);
+if (etaUtente < 18) {
+  costoBiglietto -= ((costoBiglietto * 20) / 100);
+  messaggio = 'Puoi usufruire di uno sconto del 20%. Il costo del tuo biglietto è: ' + costoBiglietto + '€';
+} else if (etaUtente > 65) {
+  costoBiglietto = costoBiglietto - ((costoBiglietto * 40) / 100);
+  messaggio = 'Puoi usufruire di uno sconto del 40%. Il costo del tuo biglietto è: ' + costoBiglietto + '€';
 } else {
-    console.log(over65);
-  }
+  messaggio = 'Il costo del tuo biglietto è: ' + costoBiglietto + '€';
+}
+document.getElementById('messaggio').innerHTML = messaggio;
