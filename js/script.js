@@ -20,8 +20,8 @@
 // }
 // document.getElementById('messaggio').innerHTML = messaggio;
 
-var buttonGenera = document.getElementById('genera');
-buttonGenera.addEventListener('click',
+var buttoneGenera = document.getElementById('genera');
+buttoneGenera.addEventListener('click',
 function() {
   var inputNome = document.getElementById('nome-utente');
   var nome = inputNome.value;
@@ -41,24 +41,26 @@ function() {
 
   if (fascia == 'minorenne') {
     costoBiglietto -= ((costoBiglietto * 20) / 100);
-    offerta = 'Sconto Minorenne';
+    offerta = ('Sconto Minorenne');
   } else if (fascia == 'over65') {
     costoBiglietto = costoBiglietto - ((costoBiglietto * 40) / 100);
-    offerta = 'Sconto Silver';
+    offerta = ('Sconto Silver');
   } else (fascia == 'maggiorenne')
     costoBiglietto;
-    offerta = 'Prezzo standard';
+    offerta = ('Prezzo standard');
   }
-// );
-
-  var carrozza = Math.floor(Math.random() * 9) + 1;
-  var codice = Math.floor(Math.random() * (100000 - 90000 + 1) );
 
   document.getElementById('nome-passeggero').innerHTML = nome;
   document.getElementById('offerta').innerHTML = offerta;
   document.getElementById('carrozza').innerHTML = carrozza;
   document.getElementById('codice-cp').innerHTML = codice;
   document.getElementById('costo').innerHTML = costoBiglietto.tofix(2);
+
+  var carrozza = Math.floor(Math.random() * 9) + 1;
+  var codice = Math.floor(Math.random() * (100000 - 90000 + 1) );
+ }
+ );
+
 
 // var dettaglioBigliettoDiv = document.getElementById('ticket');
 // dettaglioBigliettoDiv.classList.remove('nascosta');
