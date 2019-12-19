@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(207, 25, 85);
+  font-family: 'Roboto', sans-serif;
+}
+.title {
+  color: white;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.dati {
+  width: 80%;
+  margin:0 auto;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid grey;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  line-height: 25px;
+}
+h1 {
+  margin: 10px;
+}
+.row{
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+.col{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+label {
+  /* padding: 5px; */
+  margin-bottom: 5px;
+  color: rgb(207, 25, 85);
+}
+input {
+  margin: 10px;
+  border: 1px solid rgb(207, 25, 85);
+}
+input::placeholder {
+  text-align: center;
+
+}
+
+::placeholder :focus {
+  background-color:rgb(207, 25, 85);
+  color:white;
+}
+.btn {
+  height: 25px;
+  border:1px solid rgb(207, 25, 85);
+  border-radius: 5px;
+  background-color: grey;
+  color:rgb(207, 25, 85);
+  margin: 5px;
+  padding: 5px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor:pointer;
+}
+.btn:hover {
+  background-color: grey;
+  color:white;
+}
+.biglietto {
+  background-color: white;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid grey;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+.line {
+  width: 100%;
+  height: 2px;
+  border: 1px solid black;
+  color: grey;
+}
+.dettaglio {
+  display:flex;
+
+}
+.col-name {
+  width: 30%;
+}
+.col-detail {
+  width: 70%
+}
